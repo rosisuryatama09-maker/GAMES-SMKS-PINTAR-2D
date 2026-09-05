@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Block Blast 17</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>🧩 BLOCK BLAST 17</h1>
+      <p>Susun block, hancurkan baris, kumpulkan skor tanpa batas!</p>
+    </header>
+
+    <div class="game-info">
+      <div class="score-box">
+        <span>SKOR</span>
+        <h2 id="score">0</h2>
+      </div>
+
+      <div class="score-box">
+        <span>HIGH SCORE</span>
+        <h2 id="highScore">0</h2>
+      </div>
+    </div>
+
+    <div id="gameBoard"></div>
+
+    <h3>Pilih Block</h3>
+
+    <div id="blocksContainer"></div>
+
+    <button onclick="restartGame()" class="restart">
+      🔄 Mulai Ulang
+    </button>
+
+    <section class="leaderboard">
+      <h2>🏆 LEADERBOARD</h2>
+
+      <input
+        type="text"
+        id="playerName"
+        placeholder="Masukkan nama pemain"
+        maxlength="15"
+      >
+
+      <button onclick="submitScore()" class="submit">
+        Kirim Skor
+      </button>
+
+      <ol id="leaderboardList">
+        <li>Memuat leaderboard...</li>
+      </ol>
+    </section>
+
+  </div>
+
+  <script src="game.js"></script>
+
+</body>
+</html>
